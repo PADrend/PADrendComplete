@@ -46,3 +46,4 @@
 [submodule "modules/EScript"]
 	path = modules/EScript
 	url = ../../ClaudiusJ/EScript
+	branch = 0.6.7.experimental
