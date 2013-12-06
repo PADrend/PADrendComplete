@@ -40,3 +40,6 @@
 [submodule "PADrend"]
 	path = PADrend
 	url = ../PADrendApplication
+[submodule "plugins"]
+	path = plugins
+	url = ../Plugins
