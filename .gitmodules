@@ -1,0 +1,42 @@
+[submodule "modules/E_Geometry"]
+	path = modules/E_Geometry
+	url = ../E_Geometry
+[submodule "modules/E_GUI"]
+	path = modules/E_GUI
+	url = ../E_GUI
+[submodule "modules/E_MinSG"]
+	path = modules/E_MinSG
+	url = ../E_MinSG
+[submodule "modules/E_Rendering"]
+	path = modules/E_Rendering
+	url = ../E_Rendering
+[submodule "modules/E_Sound"]
+	path = modules/E_Sound
+	url = ../E_Sound
+[submodule "modules/E_Util"]
+	path = modules/E_Util
+	url = ../E_Util
+[submodule "modules/Geometry"]
+	path = modules/Geometry
+	url = ../Geometry
+[submodule "modules/GUI"]
+	path = modules/GUI
+	url = ../GUI
+[submodule "modules/MinSG"]
+	path = modules/MinSG
+	url = ../MinSG
+[submodule "modules/Rendering"]
+	path = modules/Rendering
+	url = ../Rendering
+[submodule "modules/Sound"]
+	path = modules/Sound
+	url = ../Sound
+[submodule "modules/Util"]
+	path = modules/Util
+	url = ../Util
+[submodule "ThirdParty"]
+	path = ThirdParty
+	url = ../ThirdParty
+[submodule "PADrend"]
+	path = PADrend
+	url = ../PADrendApplication
