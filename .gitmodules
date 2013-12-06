@@ -43,3 +43,6 @@
 [submodule "plugins"]
 	path = plugins
 	url = ../Plugins
+[submodule "modules/EScript"]
+	path = modules/EScript
+	url = ../../ClaudiusJ/EScript
