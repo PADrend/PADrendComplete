@@ -33,4 +33,4 @@ Building PADrend
 
 * Run PADrend:
 
-		build-relwithdebinfo/PADrend/src/PADrend
+		build-relwithdebinfo/PADrend/PADrend
