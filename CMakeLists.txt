@@ -57,18 +57,9 @@ add_subdirectory(modules/E_GUI)
 add_subdirectory(modules/E_Sound)
 add_subdirectory(modules/E_MinSG)
 add_subdirectory(PADrend)
-
-install(DIRECTORY plugins
-	DESTINATION bin COMPONENT plugins
-	PATTERN ".svn" EXCLUDE
-	PATTERN ".git" EXCLUDE
-)
-if(IS_DIRECTORY extPlugins)
-	install(DIRECTORY extPlugins
-		DESTINATION bin COMPONENT extplugins
-		PATTERN ".svn" EXCLUDE
-		PATTERN ".git" EXCLUDE
-	)
+add_subdirectory(plugins)
+if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extPlugins")
+	add_subdirectory(extPlugins)
 endif()
 
 if(CMAKE_GENERATOR MATCHES "Xcode")
