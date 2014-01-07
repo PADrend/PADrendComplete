@@ -1,49 +1,64 @@
 [submodule "modules/E_Geometry"]
 	path = modules/E_Geometry
 	url = ../E_Geometry
+	branch = master
 [submodule "modules/E_GUI"]
 	path = modules/E_GUI
 	url = ../E_GUI
+	branch = master
 [submodule "modules/E_MinSG"]
 	path = modules/E_MinSG
 	url = ../E_MinSG
+	branch = master
 [submodule "modules/E_Rendering"]
 	path = modules/E_Rendering
 	url = ../E_Rendering
+	branch = master
 [submodule "modules/E_Sound"]
 	path = modules/E_Sound
 	url = ../E_Sound
+	branch = master
 [submodule "modules/E_Util"]
 	path = modules/E_Util
 	url = ../E_Util
+	branch = master
 [submodule "modules/Geometry"]
 	path = modules/Geometry
 	url = ../Geometry
+	branch = master
 [submodule "modules/GUI"]
 	path = modules/GUI
 	url = ../GUI
+	branch = master
 [submodule "modules/MinSG"]
 	path = modules/MinSG
 	url = ../MinSG
+	branch = master
 [submodule "modules/Rendering"]
 	path = modules/Rendering
 	url = ../Rendering
+	branch = master
 [submodule "modules/Sound"]
 	path = modules/Sound
 	url = ../Sound
+	branch = master
 [submodule "modules/Util"]
 	path = modules/Util
 	url = ../Util
+	branch = master
 [submodule "ThirdParty"]
 	path = ThirdParty
 	url = ../ThirdParty
+	branch = master
 [submodule "PADrend"]
 	path = PADrend
 	url = ../PADrendApplication
+	branch = master
 [submodule "plugins"]
 	path = plugins
 	url = ../Plugins
+	branch = master
 [submodule "modules/EScript"]
 	path = modules/EScript
 	url = ../../ClaudiusJ/EScript
-	branch = 0.6.7.experimental
+	branch = 0.7.0.Eli
