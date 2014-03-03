@@ -60,5 +60,5 @@
 	branch = master
 [submodule "modules/EScript"]
 	path = modules/EScript
-	url = ../../ClaudiusJ/EScript
+	url = ../../EScript/EScript
 	branch = 0.7.0.Eli
