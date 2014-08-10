@@ -61,4 +61,4 @@
 [submodule "modules/EScript"]
 	path = modules/EScript
 	url = ../../EScript/EScript
-	branch = 0.7.0.Eli
+	branch = 0.7.2.Egon
