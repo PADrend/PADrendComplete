@@ -10,9 +10,9 @@
 # with this library; see the file LICENSE. If not, you can obtain one at
 # http://mozilla.org/MPL/2.0/.
 #
-cmake_minimum_required(VERSION 2.8.8)
+cmake_minimum_required(VERSION 3.1.0)
 
-project(PADrendComplete)
+project(PADrendComplete VERSION 1.0.0)
 
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries." ON)
 
@@ -43,18 +43,24 @@ if(NOT DEFINED CMAKE_PREFIX_PATH)
 	endif()
 endif()
 
+option(BUILD_SOUND "Build PADrend with sound support (requires OpenAL)" OFF)
+
 add_subdirectory(modules/Geometry)
 add_subdirectory(modules/Util)
 add_subdirectory(modules/Rendering)
 add_subdirectory(modules/GUI)
-add_subdirectory(modules/Sound)
+if(BUILD_SOUND)
+	add_subdirectory(modules/Sound)
+endif()
 add_subdirectory(modules/MinSG)
 add_subdirectory(modules/EScript)
 add_subdirectory(modules/E_Geometry)
 add_subdirectory(modules/E_Util)
 add_subdirectory(modules/E_Rendering)
 add_subdirectory(modules/E_GUI)
-add_subdirectory(modules/E_Sound)
+if(BUILD_SOUND)
+	add_subdirectory(modules/E_Sound)
+endif()
 add_subdirectory(modules/E_MinSG)
 add_subdirectory(PADrend)
 add_subdirectory(plugins)

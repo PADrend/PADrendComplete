@@ -1,0 +1,16 @@
+--target=x86_64-pc-windows-gnu
+-Imodules/Util
+-Imodules/MinSG
+-Imodules/Rendering
+-Imodules/Sound
+-Imodules/GUI
+-Imodules/EScript
+-Imodules/E_Geometry
+-Imodules/E_GUI
+-Imodules/E_MinSG
+-Imodules/E_Rendering
+-Imodules/E_Sound
+-Imodules/E_Util
+-Imodules
+-IThirdParty/x86_64-w64-mingw32/include
+-IThirdParty/x86_64-w64-mingw32/include/SDL2
