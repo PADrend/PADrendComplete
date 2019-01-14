@@ -1,3 +1,5 @@
 # Ignore build directories
 /build*
 .clang_complete
+*.tmp
+config.json
