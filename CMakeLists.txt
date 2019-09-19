@@ -15,7 +15,7 @@ cmake_minimum_required(VERSION 3.1.0)
 
 project(PADrendComplete VERSION 1.1.0)
 
-option(BUILD_SHARED_LIBS "Build shared instead of static libraries." ON)
+option(BUILD_SHARED_LIBS "Build shared instead of static libraries." OFF)
 
 # Make sure the libraries are in the same directory as the executable.
 if(WIN32)
@@ -63,7 +63,7 @@ if(BUILD_SOUND)
 	add_subdirectory(modules/E_Sound)
 endif()
 add_subdirectory(modules/E_MinSG)
-add_subdirectory(PADrend)
+add_subdirectory(PADrendApp)
 add_subdirectory(plugins)
 if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extPlugins")
 	add_subdirectory(extPlugins)

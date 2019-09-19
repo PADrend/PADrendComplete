@@ -51,7 +51,7 @@
 	url = ../ThirdParty
 	branch = master
 [submodule "PADrend"]
-	path = PADrend
+	path = PADrendApp
 	url = ../PADrendApplication
 	branch = master
 [submodule "plugins"]
