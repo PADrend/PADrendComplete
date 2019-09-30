@@ -18,9 +18,6 @@ matrix:
           - xorg-dev
           - ninja-build
           - libgl1-mesa-dev
-    - os: windows
-      compiler: gcc
-      install: choco install ninja
 before_script: mkdir build && cd build
 script: cmake .. -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_SHARED_LIBS=True -DBUILD_ALL_TESTS=True -DMINSG_RECOMMENDED_EXT=True -DCMAKE_CXX_FLAGS="-Wall -Wextra -pedantic" && ninja && ctest --verbose -D ExperimentalTest
 
