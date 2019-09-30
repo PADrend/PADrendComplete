@@ -22,28 +22,6 @@ if(WIN32)
 	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
 endif()
 
-if(NOT DEFINED CMAKE_PREFIX_PATH)
-	# Tell CMake to search in the "ThirdParty" directory
-	execute_process(
-		COMMAND ${CMAKE_CXX_COMPILER} -dumpmachine
-		OUTPUT_VARIABLE ARCH_TRIPLET
-		OUTPUT_STRIP_TRAILING_WHITESPACE
-	)
-	set(EXTERNAL_LIBS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/${ARCH_TRIPLET}")
-	if(IS_DIRECTORY ${EXTERNAL_LIBS_PATH})
-		set(CMAKE_PREFIX_PATH ${EXTERNAL_LIBS_PATH})
-		if(WIN32)
-			file(GLOB EXTERNAL_DLLS "${EXTERNAL_LIBS_PATH}/bin/*.dll")
-			install(FILES ${EXTERNAL_DLLS} DESTINATION bin COMPONENT runtimelibraries)
-		else()
-			if(APPLE)
-				file(GLOB EXTERNAL_DYLIBS "${EXTERNAL_LIBS_PATH}/lib/*.dylib")
-				install(FILES ${EXTERNAL_DYLIBS} DESTINATION lib COMPONENT runtimelibraries)
-			endif()
-		endif()
-	endif()
-endif()
-
 option(BUILD_SOUND "Build PADrend with sound support (requires OpenAL)" OFF)
 
 add_subdirectory(modules/Geometry)

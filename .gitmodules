@@ -46,10 +46,6 @@
 	path = modules/Util
 	url = ../Util
 	branch = master
-[submodule "ThirdParty"]
-	path = ThirdParty
-	url = ../ThirdParty
-	branch = master
 [submodule "PADrend"]
 	path = PADrendApp
 	url = ../PADrendApplication
