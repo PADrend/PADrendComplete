@@ -23,6 +23,16 @@ if(WIN32)
 endif()
 
 option(BUILD_SOUND "Build PADrend with sound support (requires OpenAL)" OFF)
+option(BUILD_ALL_TESTS "Build all PADrend tests" OFF)
+
+if(BUILD_ALL_TESTS)
+	include(CTest)
+	set(UTIL_BUILD_TESTS ON CACHE BOOL "" FORCE)
+	set(RENDERING_BUILD_TESTS ON CACHE BOOL "" FORCE)
+	set(MINSG_BUILD_TESTS ON CACHE BOOL "" FORCE)
+	set(GEOMETRY_BUILD_TESTS ON CACHE BOOL "" FORCE)
+	set(BUILD_ESCRIPT_TEST ON CACHE BOOL "" FORCE)	
+endif()
 
 add_subdirectory(modules/Geometry)
 add_subdirectory(modules/Util)
