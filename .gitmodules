@@ -47,7 +47,7 @@
 	url = ../Util
 	branch = master
 [submodule "PADrend"]
-	path = PADrendApp
+	path = PADrendMain
 	url = ../PADrendApplication
 	branch = master
 [submodule "plugins"]
