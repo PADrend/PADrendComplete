@@ -16,27 +16,18 @@ See [Installation Guide](https://padrend.github.io/Tutorials/installation_guide)
 
 		cd PADrend
 
-* Build the third party libraries (in this example using Makefiles):
-
-		cd ThirdParty
-		mkdir build
-		cd build
-		cmake ..
-		make -j8
-		cd ../..
+* Optionally, install the following packages
 		
-* or, install the following packages
-		
-		sudo apt install libcurl4-openssl-dev libglew-dev libopenal-dev libpng-dev libsdl2-dev libsdl2-image-dev libsdl2-net-dev libsqlite3-dev libxml2-dev libzip-dev libfreetype6-dev libarchive-dev zlib1g-dev
+		sudo apt install libcurl4-openssl-dev libxml2-dev
 
 * Build PADrend (in this example by using Ninja):
 
-		mkdir build-relwithdebinfo
-		cd build-relwithdebinfo
+		mkdir build
+		cd build
 		cmake -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
 		ninja
 		cd ..
 
 * Run PADrend:
 
-		build-relwithdebinfo/PADrend/PADrend
+		build/PADrend
