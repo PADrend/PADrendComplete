@@ -6,13 +6,19 @@ services:
 addons:
   apt:
     packages:
-    - xorg-dev
-    - ninja-build
-    - libgl1-mesa-dev
+      - xorg-dev
+      - ninja-build
+      - libgl1-mesa-dev
 matrix:
   include:
     - compiler: gcc
+      env:
+        - BUILD_FLAGS="-Wall -Wextra -pedantic -Wno-unused"
     - compiler: clang
+      env:
+        - BUILD_FLAGS="-Wall -Wextra -pedantic -Wno-inconsistent-missing-override -Wno-unused"
 before_script: mkdir build && cd build
-script: cmake .. -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_SHARED_LIBS=True -DBUILD_ALL_TESTS=True -DMINSG_RECOMMENDED_EXT=True -DCMAKE_CXX_FLAGS="-Wall -Wextra -pedantic -Wno-inconsistent-missing-override -Wno-unused-parameter -Wno-unused-variable" && ninja && xvfb-run ctest --verbose -D ExperimentalTest -E "SphericalSamplingSerialization|ValuatedRegionNode"
-
+script: 
+  - cmake .. -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_SHARED_LIBS=True -DBUILD_ALL_TESTS=True -DMINSG_RECOMMENDED_EXT=True -DCMAKE_CXX_FLAGS="$BUILD_FLAGS"
+  - ninja -j2
+  - ctest --verbose -D ExperimentalTest -E "SphericalSamplingSerialization|ValuatedRegionNode"
