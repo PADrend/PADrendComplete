@@ -15,10 +15,11 @@ matrix:
       env:
         - BUILD_FLAGS="-Wall -Wextra -pedantic -Wno-unused"
     - compiler: clang
+      before_install: export LD_LIBRARY_PATH=/usr/local/clang/lib:$LD_LIBRARY_PATH
       env:
-        - BUILD_FLAGS="-Wall -Wextra -pedantic -Wno-inconsistent-missing-override -Wno-unused"
+        - BUILD_FLAGS="-Wall -Wextra -pedantic -Wno-inconsistent-missing-override -Wno-unused -Wno-unused-parameter"
 before_script: mkdir build && cd build
 script: 
   - cmake .. -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_SHARED_LIBS=True -DBUILD_ALL_TESTS=True -DMINSG_RECOMMENDED_EXT=True -DCMAKE_CXX_FLAGS="$BUILD_FLAGS"
   - ninja -j2
-  - ctest --verbose -D ExperimentalTest -E "SphericalSamplingSerialization|ValuatedRegionNode"
+  - ctest --verbose -D ExperimentalTest -E "SphericalSamplingSerialization|ValuatedRegionNode|StatisticsQueryTest"
