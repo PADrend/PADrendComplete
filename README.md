@@ -1,4 +1,4 @@
-PADrendComplete
+PADrendComplete [![Build Status](https://travis-ci.org/PADrend/PADrendComplete.svg?branch=master)](https://travis-ci.org/PADrend/PADrendComplete)
 ===============
 
 Super build of PADrend
