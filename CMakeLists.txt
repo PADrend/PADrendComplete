@@ -13,9 +13,9 @@
 #
 cmake_minimum_required(VERSION 3.1.0)
 
-project(PADrendComplete VERSION 1.1.0)
+project(PADrendComplete VERSION 1.2.0)
 
-option(BUILD_SHARED_LIBS "Build shared instead of static libraries." OFF)
+option(BUILD_SHARED_LIBS "Build shared instead of static libraries." ON)
 
 # Make sure the libraries are in the same directory as the executable.
 if(WIN32)
