@@ -13,7 +13,11 @@
 #
 cmake_minimum_required(VERSION 3.1.0)
 
-project(PADrendComplete VERSION 1.2.0)
+project(PADrendComplete VERSION 1.3.0)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries." ON)
 

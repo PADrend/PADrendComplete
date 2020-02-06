@@ -1,5 +1,6 @@
 # Ignore build directories
 /build*
 .clang_complete
+.vscode
 *.tmp
 config.json
