@@ -3,3 +3,4 @@
 .clang_complete
 *.tmp
 config.json
+.vscode
